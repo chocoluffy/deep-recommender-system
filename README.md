@@ -1,3 +1,10 @@
+# 笔记
+
+- [Kaggle Jupyter技巧总结](https://github.com/chocoluffy/kaggle-notes/tree/master/Kaggle)
+- [Softmax的numpy实现, 以及SGD、minibatch](https://github.com/chocoluffy/kaggle-notes/blob/master/DL/Softmax.md)
+
+# 总结
+
 ## Typical models (classification)
 
 for supervised learning classification (such as the current problem) include techniques such as:
