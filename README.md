@@ -5,6 +5,7 @@
 
 ## Deep Learning
 - [Softmax的numpy实现, 以及SGD、minibatch](https://github.com/chocoluffy/kaggle-notes/blob/master/DL/Softmax.md)
+- [Ridge Regression的实现](https://github.com/chocoluffy/kaggle-notes/blob/master/DL/RidgeRegression.md)
 
 ## RecSys
 - [Practical Lessons from Predicting Clicks on Ads at Facebook](https://github.com/chocoluffy/kaggle-notes/tree/master/RecSys/predicting-clicks-facebook)
@@ -18,7 +19,7 @@
 
 # 总结
 
-## Typical models (classification)
+## classification
 
 for supervised learning classification (such as the current problem) include techniques such as:
 
@@ -30,7 +31,7 @@ for supervised learning classification (such as the current problem) include tec
 - support vector machines
 - neural networks (and deep learning)
 
-## (regression) continuous outcome
+## regression (continuous outcome)
 
 for supervised learning for continuous outcome problems (e.g., the second problem) include techniques such as:
 
