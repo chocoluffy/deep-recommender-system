@@ -1,6 +1,6 @@
 # 笔记
 
-- [Kaggle Jupyter技巧总结](https://github.com/chocoluffy/kaggle-notes/tree/master/Kaggle)
+- [Kaggle Jupyter技巧总结：经典机器学习模型，Pipeline, GridSearch, Ensemble等](https://github.com/chocoluffy/kaggle-notes/tree/master/Kaggle)
 - [Softmax的numpy实现, 以及SGD、minibatch](https://github.com/chocoluffy/kaggle-notes/blob/master/DL/Softmax.md)
 
 # 总结
