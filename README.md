@@ -8,7 +8,7 @@
 - [Ridge Regression的实现](https://github.com/chocoluffy/kaggle-notes/blob/master/DL/RidgeRegression.md)
 
 ## RecSys
-- [Practical Lessons from Predicting Clicks on Ads at Facebook](https://github.com/chocoluffy/kaggle-notes/tree/master/RecSys/predicting-clicks-facebook)
+[Practical Lessons from Predicting Clicks on Ads at Facebook](https://github.com/chocoluffy/kaggle-notes/tree/master/RecSys/predicting-clicks-facebook)
 
 评分：5/5。  
 简介：Facebook提出的CTR预估模型，GBDT + Logistic Regression。
