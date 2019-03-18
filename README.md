@@ -11,6 +11,7 @@
 - [Practical Lessons from Predicting Clicks on Ads at Facebook](https://github.com/chocoluffy/kaggle-notes/tree/master/RecSys/predicting-clicks-facebook)
 
 评分：5/5。
+简介：Facebook提出的CTR预估模型，GBDT + Logistic Regression。
 
 - 加深了对entropy的理解，以及在CTR领域使用normalized entropy的实践。
 - 学习到了GBM和LR的结合。用boosted decision tree来主要负责supervised feature learning有很大的优势。之后对接的LR + SGD可以作为online learning保持日常更新训练保证data freshness。
