@@ -13,6 +13,21 @@
 
 ## Recommendation System
 
+### A Cross-Domain Recommendation Mechanism for Cold-Start Users Based on Partial Least Squares Regression
+
+评分：3.5/5。
+简介：利用PLSR来解决用户推荐场景里cold start的问题。
+
+- PLSR适合针对多模态的数据特征进行回归拟合，原理是在压缩降维时考虑最大化cross-domain数据的covariance，区别于PCA，LSI等仅仅最大化单个domain数据的variance。论文针对用户在没有任何历史评分记录的target domain中，利用已有的可能完全不同种类的source domain的评分记录来进行预测。
+- PLSR的一个前提是需要完整的matrix信息，而user rating matrix的训练数据往往稀疏而且有很多缺失的entry。常见的预处理是利用MF(Matrix Factorization)或其变式NMF(Non-negative MF)来填充空缺的entry。
+相比SVD，MF能够利用Alternating Least Square的方式并行化运算较快，但是并没有能够像SVD中那样可以选择合适的top K rank.
+- 论文中提到一个生产环境中加速的技巧，针对user rating matrix往往维度过大导致较高的计算复杂度，是在对数据预处理(补值)之后再进行一次MF来拿到user latent factor(n*k)，然后利用这个数据在往后的计算中代替原始的user rating matrix以降低计算复杂度。**online阶段加入新用户时再一次的MF计算，可以利用incremental MF的技巧来避免重复计算。**
+- 其他类似的推荐算法：
+    - crossMF：合并training，test数据一并使用MF来预测值。
+    - crossCBMF(clustering-based MF)：state-of-art。
+- 本质上PLSR也属于linear regression的一种，对于模拟数据间非线性的关系可以考虑kernel PLSR。对于传统机器学习算法来说，很多时候从线性到非线性的处理基本都会借助kernel来直接代替曾经的点乘操作，比如SVM。
+- 联想到我曾在一个reverse image search engine的kaggle竞赛中用到PLSR针对image feature vector和word embedding进行跨模态建模，效果不错，最终LB拿了第一名。
+
 ### [IRGAN - A Minimax Game for Unifying Generative and Discriminative Information Retrieval Models](https://github.com/chocoluffy/deep-learning-notes/tree/master/RecSys/IRGAN)
 
 评分：5/5。
