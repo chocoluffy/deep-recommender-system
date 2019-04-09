@@ -41,4 +41,3 @@
 - Next, we formulate the problem as pairwise regression with search labels as utilities and use data D to train a Gradient Boosting Decision Trees (GBDT) model, using package4that was modified to support Lambda Rank. When evaluating different models offline, we use NDCG, a standard ranking metric, on hold-out set of search sessions, i.e. 80% of D for training and 20% for testing.
 
 - Finally, we trained a new GBDT Search Ranking model with embedding features added. Feature importances for embedding features (ranking among 104 features) are shown in Table 7
-- 

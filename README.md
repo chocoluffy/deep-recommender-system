@@ -13,7 +13,7 @@
 
 ## Recommendation System
 
-### Real-time Personalization using Embeddings for Search Ranking at Airbnb
+### [Real-time Personalization using Embeddings for Search Ranking at Airbnb](https://github.com/chocoluffy/deep-learning-notes/tree/master/RecSys/Embedding-Airbnb)
 
 评分：5/5。  
 简介：对listing做embedding，将user type，listing type以及query在同一个vector space构建embedding，以实时更新搜索结果并提高准度。KDD 2018 best paper。  
