@@ -13,6 +13,18 @@
 
 ## Recommendation System
 
+### Real-time Personalization using Embeddings for Search Ranking at Airbnb
+
+评分：5/5。  
+简介：对listing做embedding，将user type，listing type以及query在同一个vector space构建embedding，以实时更新搜索结果并提高准度。KDD 2018 best paper。  
+
+- 利用in-session signal，将用户行为（包括点击、最终达成交易以及被拒绝）模拟为一个时序序列，类比word2vec中的单个句子。然后利用skip-gram和negative sampling来进行word2vec模型的训练。
+- 对实际场景的精准观察是很多机制设计的灵感来源。比如：
+    - 将最终的bookings作为global context添加进每一个sliding window的训练。
+    - 因为旅游目的地的搜索是congregated search，于是添加在target area区域内的negative sampling sets。
+    - 将奖赏(vetor距离更新)和惩罚(vector相互远离)加入进objective function的设计。
+    - 考虑到用户booking的稀疏性，采用user type(users' many-to-one relation)，并将listing type和query type并入同一序列进行训练，使得embedding在同一个vector space，以允许用户在搜索时可以提供语义上最接近的结果(而不是简单匹配)，并改善最相近listing carousel模块的推荐结果。
+
 ### [A Cross-Domain Recommendation Mechanism for Cold-Start Users Based on Partial Least Squares Regression](https://github.com/chocoluffy/deep-learning-notes/tree/master/RecSys/PLSR)
 
 评分：3.5/5。  
