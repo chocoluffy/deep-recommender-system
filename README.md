@@ -13,6 +13,17 @@
 
 ## Recommendation System
 
+### Wide & Deep Learning for Recommender Systems
+
+评分：5/5。  
+简介：利用logistic regression针对广度的交叉特征(cross product transformation)，利用NN负责深度特征挖掘，并同时进行joint training。  
+
+- 提出Wide & Deep的解决方案来改善memorization(relevancy)和generality(diversity)的表现。改善传统embedding容易因为稀疏输入而over-generalize的问题。
+- 介绍了工业上推荐系统的流程，先通过retrival从数据库选出初步的candidate，O(100)的量级；然后再通过rank的模型将candidate进行精排返回前十作为结果，Wide & Deep是在这个rank阶段的一种方案。
+- 每一次retrain时利用上一次的weight初始化，以减少训练时间，类比transfer learning。
+- 为了线上的低延迟在10ms量级，采取多线程small batch的方式跑inference，而不是将所有candidate放在同一个batch里跑。最终batch size为50，4个线程可以达到14ms的表现。
+- Matrix Factorization里通过dot product引入interaction的特征，其根本目的是为了引入non-linearity。但这部分可以用NN更好的完成。
+
 ### [Real-time Personalization using Embeddings for Search Ranking at Airbnb](https://github.com/chocoluffy/deep-learning-notes/tree/master/RecSys/Embedding-Airbnb)
 
 评分：5/5。  
