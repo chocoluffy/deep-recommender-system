@@ -13,10 +13,10 @@
 
 ## Recommendation System
 
-### Wide & Deep Learning for Recommender Systems
+### [Wide & Deep Learning for Recommender Systems](https://github.com/chocoluffy/deep-learning-notes/tree/master/RecSys/Wide%26Deep)
 
 评分：5/5。  
-简介：利用logistic regression针对广度的交叉特征(cross product transformation)，利用NN负责深度特征挖掘，并同时进行joint training。  
+简介：利用logistic regression针对广度的交叉特征(cross product transformation)，利用NN负责深度特征挖掘，并同时进行joint training。来自Google的工程实践总结。  
 
 - 提出Wide & Deep的解决方案来改善memorization(relevancy)和generality(diversity)的表现。改善传统embedding容易因为稀疏输入而over-generalize的问题。
 - 介绍了工业上推荐系统的流程，先通过retrival从数据库选出初步的candidate，O(100)的量级；然后再通过rank的模型将candidate进行精排返回前十作为结果，Wide & Deep是在这个rank阶段的一种方案。
