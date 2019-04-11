@@ -13,6 +13,15 @@
 
 ## Recommendation System
 
+### Collaborative Deep Learning for Recommender Systems
+
+评分：4/5。
+简介：针对rating和content information matrix，设计MAP(Maximum A Priori)的objective function来改善user embedding。相比传统collaborative filtering不擅长直接处理稀疏rating输入，CDL通过更好地结合content information可以得到更好的rating prediction。
+
+- 引入SDAE(Stacked Denoising Auto Encoder)来获得item的compact feature。随机初始化单位user embedding，长度等同于SDAE中encoder的输出维度，使得`uTv = r`为目标来训练。其中v为encoder输出，及item的compact feature。构造MAP的objective利用EM交替更新参数。
+- 参数初始化都用bayesian model。整体上是hierachial bayesian model。
+- 使用recall作为evaluation metric，即在推荐结果中relevant的数量占全部relevant item的数量。对比precision。
+
 ### [Wide & Deep Learning for Recommender Systems](https://github.com/chocoluffy/deep-learning-notes/tree/master/RecSys/Wide%26Deep)
 
 评分：5/5。  
