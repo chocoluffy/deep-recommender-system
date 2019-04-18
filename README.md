@@ -13,10 +13,10 @@
 
 ## Recommendation System
 
-### Deep Neural Networks for YouTube Recommendations
+### [Deep Neural Networks for YouTube Recommendations](https://github.com/chocoluffy/deep-learning-notes/tree/master/RecSys/Youtube-DNN)
 
-评分：5+/5。
-简介：使用DNN对大规模线上推荐系统架构的一次综述，包含Candidate Generation和Ranking两部分。Candidiate Gneration的部分负责生成user embedding，借鉴wordvec的skip gram negative sampling模型，Ranking部分使用类似的架构，并用weighted LR将目标改为预计观看时间。很经典的文章。
+评分：5+/5。  
+简介：使用DNN对大规模线上推荐系统架构的一次综述，包含Candidate Generation和Ranking两部分。Candidiate Gneration的部分负责生成user embedding，借鉴wordvec的skip gram negative sampling模型，Ranking部分使用类似的架构，并用weighted LR将目标改为预计观看时间。很经典的文章。  
 
 - DNN的方法可以看作是泛化的matrix factorization的类别，但是优势在于可以加入任意连续或者类别的特征，适合不断迭代。
 - 在线系统获得的显式特征较稀疏，比如点赞、收藏等用户行为。训练时更多利用到的是隐式特征，比如用户观看市场，是否完整观看等等。
