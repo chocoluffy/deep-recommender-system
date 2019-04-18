@@ -1,6 +1,6 @@
 # Practical Lessons from Predicting Clicks on Ads at Facebook
 
-评分：5/5。
+评分：4/5。
 
 - 加深了对entropy的理解，以及在CTR领域使用normalized entropy的实践。
 - 学习到了GBM和LR的结合。用boosted decision tree来主要负责supervised feature learning有很大的优势。之后对接的LR + SGD可以作为online learning保持日常更新训练保证data freshness。
