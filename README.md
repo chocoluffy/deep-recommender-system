@@ -13,6 +13,18 @@
 
 ## Recommendation System
 
+### Deep Neural Networks for YouTube Recommendations
+
+评分：5+/5。
+简介：使用DNN对大规模线上推荐系统架构的一次综述，包含Candidate Generation和Ranking两部分。Candidiate Gneration的部分负责生成user embedding，借鉴wordvec的skip gram negative sampling模型，Ranking部分使用类似的架构，并用weighted LR将目标改为预计观看时间。很经典的文章。
+
+- DNN的方法可以看作是泛化的matrix factorization的类别，但是优势在于可以加入任意连续或者类别的特征，适合不断迭代。
+- 在线系统获得的显式特征较稀疏，比如点赞、收藏等用户行为。训练时更多利用到的是隐式特征，比如用户观看市场，是否完整观看等等。
+- CF中并没有强调次序的观念，而youtube的DNN做法则只选取在用户观看视频之前的N个操作数据作为输入。同时使用unordered bag来防止次序带来的直接影响。比如推荐用户刚搜索过的视频等。
+- 鉴于用户点击视频事件highly unbalanced的属性，引入以用户观看时长为权重的weighted logistic regression，并推导可用odds来近似用户观看视频时长的预期（值域相同）。
+- 线上serving的场景中，可以根据用户的最新操作实时更新user embedding，而video embedding则是SGNS训练中的副产物，需要定期全量重训。实时场景里将embedding存入内存用ANN的方法，比如LSH，来推荐视频，而不需要对全量视频跑inference。
+- example age特征的引入很关键，指该用户操作距离此训练的时间间隔，使得模型可以模拟实际视频走红的时序特征。
+
 ### [Collaborative Deep Learning for Recommender Systems](https://github.com/chocoluffy/deep-learning-notes/tree/master/RecSys/Collaborative-Deep-Learning)
 
 评分：4/5。  
