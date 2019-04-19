@@ -15,9 +15,9 @@
 
 - 【5+/5】[Deep Neural Networks for YouTube Recommendations](https://github.com/chocoluffy/deep-learning-notes/tree/master/RecSys/Youtube-DNN)
 - 【4/5】[Collaborative Deep Learning for Recommender Systems](https://github.com/chocoluffy/deep-learning-notes/tree/master/RecSys/Collaborative-Deep-Learning)
-- 【4.5/5】[Wide & Deep Learning for Recommender Systems](https://github.com/chocoluffy/deep-learning-notes/tree/master/RecSys/Wide%26Deep)
+- 【4/5】[Wide & Deep Learning for Recommender Systems](https://github.com/chocoluffy/deep-learning-notes/tree/master/RecSys/Wide%26Deep)
 - 【5/5】[Real-time Personalization using Embeddings for Search Ranking at Airbnb](https://github.com/chocoluffy/deep-learning-notes/tree/master/RecSys/Embedding-Airbnb)
-- 【3.5/5】[A Cross-Domain Recommendation Mechanism for Cold-Start Users Based on Partial Least Squares Regression](https://github.com/chocoluffy/deep-learning-notes/tree/master/RecSys/PLSR) 
+- 【3/5】[A Cross-Domain Recommendation Mechanism for Cold-Start Users Based on Partial Least Squares Regression](https://github.com/chocoluffy/deep-learning-notes/tree/master/RecSys/PLSR) 
 - 【5/5】[IRGAN - A Minimax Game for Unifying Generative and Discriminative Information Retrieval Models](https://github.com/chocoluffy/deep-learning-notes/tree/master/RecSys/IRGAN) 
 - 【4/5】[Practical Lessons from Predicting Clicks on Ads at Facebook](https://github.com/chocoluffy/kaggle-notes/tree/master/RecSys/predicting-clicks-facebook)
 
@@ -47,7 +47,7 @@
 
 ### [Wide & Deep Learning for Recommender Systems](https://github.com/chocoluffy/deep-learning-notes/tree/master/RecSys/Wide%26Deep)
 
-评分：4.5/5。  
+评分：4/5。  
 简介：利用logistic regression针对广度的交叉特征(cross product transformation)，利用NN负责深度特征挖掘，并同时进行joint training。来自Google的工程实践总结。  
 
 - 提出Wide & Deep的解决方案来改善memorization(relevancy)和generality(diversity)的表现。改善传统embedding容易因为稀疏输入而over-generalize的问题。
@@ -70,7 +70,7 @@
 
 ### [A Cross-Domain Recommendation Mechanism for Cold-Start Users Based on Partial Least Squares Regression](https://github.com/chocoluffy/deep-learning-notes/tree/master/RecSys/PLSR)
 
-评分：3.5/5。  
+评分：3/5。  
 简介：利用PLSR来解决用户推荐场景里cold start的问题。
 
 - PLSR适合针对多模态的数据特征进行回归拟合，原理是在压缩降维时考虑最大化cross-domain数据的covariance，区别于PCA，LSI等仅仅最大化单个domain数据的variance。论文针对用户在没有任何历史评分记录的target domain中，利用已有的可能完全不同种类的source domain的评分记录来进行预测。

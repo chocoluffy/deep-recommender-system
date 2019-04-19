@@ -1,6 +1,6 @@
 # A Cross-Domain Recommendation Mechanism for Cold-Start Users Based on Partial Least Squares Regression
 
-评分：3.5/5。  
+评分：3/5。  
 简介：利用PLSR来解决用户推荐场景里cold start的问题。
 
 - PLSR适合针对多模态的数据特征进行回归拟合，原理是在压缩降维时考虑最大化cross-domain数据的covariance，区别于PCA，LSI等仅仅最大化单个domain数据的variance。论文针对用户在没有任何历史评分记录的target domain中，利用已有的可能完全不同种类的source domain的评分记录来进行预测。

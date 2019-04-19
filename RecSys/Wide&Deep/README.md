@@ -1,6 +1,6 @@
 # Wide & Deep Learning for Recommender Systems
 
-评分：4.5/5。  
+评分：4/5。  
 简介：利用logistic regression针对广度的交叉特征(cross product transformation)，利用NN负责深度特征挖掘，并同时进行joint training。来自Google的工程实践总结。  
 
 - 提出Wide & Deep的解决方案来改善memorization(relevancy)和generality(diversity)的表现。改善传统embedding容易因为稀疏输入而over-generalize的问题。
