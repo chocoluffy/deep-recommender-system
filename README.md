@@ -5,6 +5,7 @@
 - [Softmax的numpy实现, 以及SGD、minibatch](https://github.com/chocoluffy/deep-learning-notes/blob/master/DL/Softmax.ipynb)
 - [Ridge Regression的实现](https://github.com/chocoluffy/deep-learning-notes/blob/master/DL/Ridge%20Regression.ipynb)
 - [Customized Convolution Neural Network的Pytorch实现，包括batch normalization](https://github.com/chocoluffy/deep-learning-notes/blob/master/DL/CNN_pytorch.ipynb)
+- [GAN on Fashion-MNIST dataset，Pytorch实现](https://github.com/chocoluffy/deep-learning-notes/blob/master/DL/GAN.py)
 
 ## Kaggle
 
