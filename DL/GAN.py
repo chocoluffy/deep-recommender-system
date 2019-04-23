@@ -109,8 +109,8 @@ for epoch in range(1, epochs):
     for n_batch, batch in enumerate(data_loader):
         # Train Discriminator
         batch = batch[0] # batch = [batch_img, label] batch_img: batch_size * 1 * 28 * 28
-        trueData = autograd.Variable(batch)
-        falseData = generator(autograd.Variable(randn(batch.size(0), 100))).detach() # detach to not calculate gradients
+        trueData = autograd.Variable(batch).detach() # detach to not calculate gradients
+        falseData = generator(autograd.Variable(randn(batch.size(0), 100), requires_grad=True))
         
         trueN = trueData.size(0)
         falseN = falseData.size(0)
