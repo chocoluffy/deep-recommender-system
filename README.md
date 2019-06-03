@@ -14,6 +14,7 @@
 
 ## Recommendation System
 
+- 【3/5】[Behavior Sequence Transformer for E-commerce Recommendation in Alibaba](https://github.com/chocoluffy/deep-recommender-system/tree/master/RecSys/Transformer-in-WDL)
 - 【5+/5】[Deep Neural Networks for YouTube Recommendations](https://github.com/chocoluffy/deep-learning-notes/tree/master/RecSys/Youtube-DNN)
 - 【4/5】[Collaborative Deep Learning for Recommender Systems](https://github.com/chocoluffy/deep-learning-notes/tree/master/RecSys/Collaborative-Deep-Learning)
 - 【4/5】[Wide & Deep Learning for Recommender Systems](https://github.com/chocoluffy/deep-learning-notes/tree/master/RecSys/Wide%26Deep)
@@ -24,6 +25,15 @@
 
 
 ### 概述
+
+### [Behavior Sequence Transformer for E-commerce Recommendation in Alibaba](https://github.com/chocoluffy/deep-recommender-system/tree/master/RecSys/Transformer-in-WDL)
+
+评分：3/5。
+简介：将Transformer的self attention结构应用在推荐系统典型的Wide & Deep网络结构中。
+
+- 结合了position embedding，用距离当前推荐时间的时间差作为位置信息。
+- 采用的是内部的attention机制，也即Q = K = V = embedding，其中dot product计算的是物品之间的相似程度。最后采用multi-head的做法，类比CNN中使用的多个kernel得到多个feature map，multi-head使得能够探索出embedding不同位置的特性。注意的一点是，attention同样可以引入外部的embedding，只要保证key和value是一一对应的即可，可以利用外部embedding来升、降维度。
+- 最终的目标是预测目标产品的CTR的概率，适合电商的环境。对于视频推荐的场景，可以尝试youtube那篇文章的目标，即expected watch time。
 
 ### [Deep Neural Networks for YouTube Recommendations](https://github.com/chocoluffy/deep-learning-notes/tree/master/RecSys/Youtube-DNN)
 
