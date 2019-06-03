@@ -28,8 +28,8 @@
 
 ### [Behavior Sequence Transformer for E-commerce Recommendation in Alibaba](https://github.com/chocoluffy/deep-recommender-system/tree/master/RecSys/Transformer-in-WDL)
 
-评分：3/5。
-简介：将Transformer的self attention结构应用在推荐系统典型的Wide & Deep网络结构中。
+评分：3/5。  
+简介：将Transformer的self attention结构应用在推荐系统典型的Wide & Deep网络结构中。  
 
 - 结合了position embedding，用距离当前推荐时间的时间差作为位置信息。
 - 采用的是内部的attention机制，也即Q = K = V = embedding，其中dot product计算的是物品之间的相似程度。最后采用multi-head的做法，类比CNN中使用的多个kernel得到多个feature map，multi-head使得能够探索出embedding不同位置的特性。注意的一点是，attention同样可以引入外部的embedding，只要保证key和value是一一对应的即可，可以利用外部embedding来升、降维度。
