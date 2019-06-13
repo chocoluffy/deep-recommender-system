@@ -32,10 +32,10 @@
 评分：4/5。  
 简介：将Bert双向Transformer的结构带入了推荐系统，并改变了目标用Cloze task来防止信息泄漏并可用于预测随机masked的item。  
 
-- 其中一个关键的假设：用户行为序列并没有NLP那样严格的逻辑依赖关系，更多在视频推荐场景里强调的是相关性，发现性和多样性。在- Transformer里依旧是单向的次序结构，只不过相比RNN来说，Transformer能够在每一步都连接过去所有的input，而不必将信息condense到一个hidden state里（信息噪音和流失）。
-- Transformer的引入相比RNN对并行计算友好。复- 杂度从O(nd^2)变为O(n^2d)，其中n为序列长度而d为特征长度，对于短序列高维的特征表示来说，self-attention是一个选择。同- 时由于只引入了matrix multiplication的操作，对SGD运算友好。
+- 其中一个关键的假设：用户行为序列并没有NLP那样严格的逻辑依赖关系，更多在视频推荐场景里强调的是相关性，发现性和多样性。在Transformer里依旧是单向的次序结构，只不过相比RNN来说，Transformer能够在每一步都连接过去所有的input，而不必将信息condense到一个hidden state里（信息噪音和流失）。
+- Transformer的引入相比RNN对并行计算友好。复杂度从O(nd^2)变为O(n^2d)，其中n为序列长度而d为特征长度，对于短序列高维的特征表示来说，self-attention是一个选择。同时由于只引入了matrix multiplication的操作，对SGD运算友好。
 - self attention本身其实和位置无关，只是一种扩大receptive field的方式，类似CNN中利用叠加起来的层次来一部部增大感受域，如果需要次序的概念，需要加入position encoding。
-- 在推荐系统里，position embedding对应的意义是此操作距离用户当前时刻的时间差。这- 个position embedding在不同的场景应当有不同的意义和改进技巧。比- 如在图片领域强调的是translation invariance那么相比absolute position更合适的其实是relative position encoding等等。
+- 在推荐系统里，position embedding对应的意义是此操作距离用户当前时刻的时间差。这个position embedding在不同的场景应当有不同的意义和改进技巧。比如在图片领域强调的是translation invariance那么相比absolute position更合适的其实是relative position encoding等等。
 
 ### [Behavior Sequence Transformer for E-commerce Recommendation in Alibaba](https://github.com/chocoluffy/deep-recommender-system/tree/master/RecSys/Transformer-in-WDL)
 
