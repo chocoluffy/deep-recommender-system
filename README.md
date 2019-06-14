@@ -14,6 +14,7 @@
 
 ## Recommendation System
 
+- 【5/5】[Multi-Interest Network with Dynamic Routing for Recommendation at Tmall](https://github.com/chocoluffy/deep-recommender-system/tree/master/RecSys/MIND)
 - 【4/5】[BERT4Rec- Sequential Recommendation with Bidirectional Encoder Representations from Transformer](https://github.com/chocoluffy/deep-recommender-system/tree/master/RecSys/BERT4Rec)
 - 【3/5】[Behavior Sequence Transformer for E-commerce Recommendation in Alibaba](https://github.com/chocoluffy/deep-recommender-system/tree/master/RecSys/Transformer-in-WDL)
 - 【5+/5】[Deep Neural Networks for YouTube Recommendations](https://github.com/chocoluffy/deep-learning-notes/tree/master/RecSys/Youtube-DNN)
@@ -26,6 +27,18 @@
 
 
 ### 概述
+
+### [Multi-Interest Network with Dynamic Routing for Recommendation at Tmall](https://github.com/chocoluffy/deep-recommender-system/tree/master/RecSys/MIND) 
+
+评分：5/5。  
+简介：引入capsule的dynamic routing和label-aware attention，对用户历史行为序列（点击商品的集合）提取用户兴趣特征（user embedding）。相比阿里之前的DIN在用户行为聚类上更进了一步，本质上是商品特征的soft clustering，并根据电商环境进行了改良。  
+
+- 传统方式CF对稀疏数据集表现不好，而且存在MF计算量大的问题。而DNN的方式的局限在将用户特征用一个低维的向量来表示，对于多兴趣方向行为的用户损失了信息。DIN采用self attention的做法，使得对每一个目标商品可以attend to globel items，并在最后通过sigmoid预测CTR，速度慢，更适合Ranking精排序阶段。而MIND的主要任务和DIN不同，MIND主要负责输出用户嵌入向量，由于user embedding和item embedding在同一个vector space，可以快速通过内积的nearest neighbor得到大致推荐商品范围（粗排在一千个左右），为Matching粗排序阶段的筛选作准备。
+- 在dynamic routing输出了兴趣聚类capsules之后，接label-aware attetion层可以让训练让target item表示为interest capsules的一个线性组合。其实Key为target item，Q和V为interest capsules。
+- 具体用户兴趣聚类的个数可以动态调整。比如是用户历史行为的log。由于推荐系统环境中用户行为序列的长度不定（variable length），改进dynamic routing采用fixed shared weight使得未知商品同样能够作为网络输入。
+- 类似Airbnb real-time personalization的做法。目前几种主流将匹配机制做到实时的方法本质上都是将user和item embedding训练在同一个vector space，然后得以通过内积来进行快速比较。同时为了反映用户行为的变化，输入user embedding的架构需要对variable length的行为序列兼容，或者采取most recent N的固定架构。
+- 和其他Matching粗排序阶段的算法比较发现，MIND > item-based CF > Youtube DNN.
+
 
 ### [BERT4Rec- Sequential Recommendation with Bidirectional Encoder Representations from Transformer](https://github.com/chocoluffy/deep-recommender-system/tree/master/RecSys/BERT4Rec)
 
