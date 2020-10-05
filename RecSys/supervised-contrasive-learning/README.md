@@ -1,6 +1,6 @@
 # Supervised Contrastive Learning
 
-评分：4/5。 
+评分：4/5。  
 简介：Google家在SimCLR自监督对比学习（contrastive learning）的loss结构基础上，延伸到有监督学习中，并在多项图像任务中排列第一。论文本身和推荐系统无关，但是如果仔细推敲，公式非常接近bayesian personalized ranking loss（BPR loss），而其实这一类triplet loss正是contrasive learning的其中一个子应用，也即当只有一个正负样本对的时候，当正负样本对的数量增大到多个时，将sigmoid改进为softmax，即可推出该论文中自监督学习的公式了。
 
 - triplet loss是contrasive learning的其中一个应用。即当只有一个正样本和一个负样本的时候。对当前mini-batch内的样本做对比学习。
