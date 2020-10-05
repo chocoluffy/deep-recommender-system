@@ -14,6 +14,7 @@
 
 ## Recommendation System
 
+- 【4/5】[Supervised Contrastive Learning](https://github.com/chocoluffy/deep-recommender-system/tree/master/RecSys/supervised-contrasive-learning)
 - 【5/5】[Multi-Interest Network with Dynamic Routing for Recommendation at Tmall](https://github.com/chocoluffy/deep-recommender-system/tree/master/RecSys/MIND)
 - 【4/5】[BERT4Rec- Sequential Recommendation with Bidirectional Encoder Representations from Transformer](https://github.com/chocoluffy/deep-recommender-system/tree/master/RecSys/BERT4Rec)
 - 【3/5】[Behavior Sequence Transformer for E-commerce Recommendation in Alibaba](https://github.com/chocoluffy/deep-recommender-system/tree/master/RecSys/Transformer-in-WDL)
