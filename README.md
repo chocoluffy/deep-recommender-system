@@ -1,17 +1,5 @@
 # 目录
 
-## Deep Learning
-
-- [Softmax的numpy实现, 以及SGD、minibatch](https://github.com/chocoluffy/deep-learning-notes/blob/master/DL/Softmax.ipynb)
-- [Ridge Regression的实现](https://github.com/chocoluffy/deep-learning-notes/blob/master/DL/Ridge%20Regression.ipynb)
-- [Customized Convolution Neural Network的Pytorch实现，包括batch normalization](https://github.com/chocoluffy/deep-learning-notes/blob/master/DL/CNN_pytorch.ipynb)
-- [GAN on Fashion-MNIST dataset，Pytorch实现](https://github.com/chocoluffy/deep-learning-notes/blob/master/DL/GAN.py)
-
-## Kaggle
-
-- [Kaggle Jupyter技巧总结：经典机器学习模型，Pipeline, GridSearch, Ensemble等](https://github.com/chocoluffy/kaggle-notes/tree/master/Kaggle)
-
-
 ## Recommendation System
 
 - 【4/5】[Supervised Contrastive Learning](https://github.com/chocoluffy/deep-recommender-system/tree/master/RecSys/supervised-contrasive-learning)
@@ -26,8 +14,19 @@
 - 【5/5】[IRGAN - A Minimax Game for Unifying Generative and Discriminative Information Retrieval Models](https://github.com/chocoluffy/deep-learning-notes/tree/master/RecSys/IRGAN) 
 - 【4/5】[Practical Lessons from Predicting Clicks on Ads at Facebook](https://github.com/chocoluffy/kaggle-notes/tree/master/RecSys/predicting-clicks-facebook)
 
+## Deep Learning
 
-### 概述
+- [Softmax的numpy实现, 以及SGD、minibatch](https://github.com/chocoluffy/deep-learning-notes/blob/master/DL/Softmax.ipynb)
+- [Ridge Regression的实现](https://github.com/chocoluffy/deep-learning-notes/blob/master/DL/Ridge%20Regression.ipynb)
+- [Customized Convolution Neural Network的Pytorch实现，包括batch normalization](https://github.com/chocoluffy/deep-learning-notes/blob/master/DL/CNN_pytorch.ipynb)
+- [GAN on Fashion-MNIST dataset，Pytorch实现](https://github.com/chocoluffy/deep-learning-notes/blob/master/DL/GAN.py)
+
+## Kaggle
+
+- [Kaggle Jupyter技巧总结：经典机器学习模型，Pipeline, GridSearch, Ensemble等](https://github.com/chocoluffy/kaggle-notes/tree/master/Kaggle)
+
+
+## 论文概述
 
 ### [Supervised Contrastive Learning](https://github.com/chocoluffy/deep-recommender-system/tree/master/RecSys/supervised-contrasive-learning)
 
