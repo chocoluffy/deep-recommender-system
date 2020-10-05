@@ -30,10 +30,8 @@
 
 ### [Supervised Contrastive Learning](https://github.com/chocoluffy/deep-recommender-system/tree/master/RecSys/supervised-contrasive-learning)
 
-评分：4/5。
+评分：4/5。  
 简介：Google家在SimCLR自监督对比学习（contrastive learning）的loss结构基础上，延伸到有监督学习中，并在多项图像任务中排列第一。论文本身和推荐系统无关，但是如果仔细推敲，公式非常接近bayesian personalized ranking loss（BPR loss），而其实这一类triplet loss正是contrasive learning的其中一个子应用，也即当只有一个正负样本对的时候，当正负样本对的数量增大到多个时，将sigmoid改进为softmax，即可推出该论文中自监督学习的公式了。
-
-- triplet loss是contrasive learning的其中一个应用。即当只有一个正样本和一个负样本的时候。对当前mini-batch内的样本做对比学习。
 - 相比于无监督的模式（SimCLR）的做法。
 	- 需要一个encoder network，将image raw features映射为一个向量。比如图像中使用的是resnet，输出2048维度的向量。叠加一个norm layer，实验表明有助于提高指标。
 	- 一个projection network，将2048维度映射到128维度，后续接一个norm layer，因为这么做能够是的后续的内积操作 = cos可以等效于优化向量方向来训练。分子 -> 1也就是向量方向一致。最终infer的时候会抛弃这个projection network，理由：实验表明，使用encoder network的结果对后续下游任务更友好。
