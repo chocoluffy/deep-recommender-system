@@ -10,9 +10,9 @@
 - 启发：这个方式不局限于z = user embedding点乘item embedding。也适用于i2i的训练，其中z = 两个item embedding的相似度。
 - 为什么这个有效果？因为主要来自于分母的设计，**需要最大化分子的同时，最小化分母；也就是分母中所有负样本中最难的那个样本会成为优化的上界。从而模型会去优化更难的样本。而不会说是难的负样本和容易的负样本贡献的梯度是一致的。**
 - 在无监督的公式里面，分子是1个正样本:
-![https://raw.githubusercontent.com/chocoluffy/deep-recommender-system/master/RecSys/supervised-contrasive-learning/self-supervised-equations.png]
+![self-supervised-equations](https://raw.githubusercontent.com/chocoluffy/deep-recommender-system/master/RecSys/supervised-contrasive-learning/self-supervised-equations.png)
 - 而在监督学习里面，把1个正样本拓展为这个mini batch里面的所有同属于这个class的正样本:
-![https://raw.githubusercontent.com/chocoluffy/deep-recommender-system/master/RecSys/supervised-contrasive-learning/supervised-equations.png]
+![supervised-equations](https://raw.githubusercontent.com/chocoluffy/deep-recommender-system/master/RecSys/supervised-contrasive-learning/supervised-equations.png)
 - **公式非常接近bayesian personalized ranking loss。其中的区别是，bpr loss针对的是一对正负样本对，属于triplet loss。**
 - **在binary classification的时候，sigmoid = softmax；也就是其实把BPR loss延展为多分类问题的时候，就改为softmax，也就是上图无监督学习中的公式了。也就是从反向角度去证明了，其实SimCLR的思路有效，其实等效于把一个二分类的优化问题，转换为了多分类优化**，其中其他的分类是包含了较难的负样本和较容易的负样本。
-![https://raw.githubusercontent.com/chocoluffy/deep-recommender-system/master/RecSys/supervised-contrasive-learning/bpr-loss.png]
+![bpr-loss](https://raw.githubusercontent.com/chocoluffy/deep-recommender-system/master/RecSys/supervised-contrasive-learning/bpr-loss.png)
